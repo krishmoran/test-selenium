@@ -10,7 +10,7 @@ This repository also contains a requirements.txt file that lists all the necessa
 # Supported Sites
 - Daraz.lk
 - Kapruka.com
-- Wasi.com
+- Wasi.lk
 
 # Getting Started
 To get started with this script, follow these steps:
