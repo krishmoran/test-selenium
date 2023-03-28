@@ -15,7 +15,7 @@ This repository also contains a requirements.txt file that lists all the necessa
 # Getting Started
 To get started with this script, follow these steps:
 
-Clone this repository to your local machine using git clone https://github.com/your-username/product-price-comparison-script.git
+Clone this repository to your local machine using git clone https://github.com/zainmz/webscraper-selenium-streamlit.git
 Install the required dependencies using pip install -r requirements.txt
 Run the script using streamlit run app.py
 Input the products you want to compare and select the online retailers you want to search
