@@ -225,6 +225,3 @@ def wasi(url):
     df = pd.DataFrame(
         {'Site': '<img src="' + x + '" width="60" >', 'Product Name': names, 'Price': prices, 'Image Link': img_links})
     return df.iloc[[0]]
-
-
-wasi("https://www.wasi.lk/?s=samsung+galaxy&post_type=product")
