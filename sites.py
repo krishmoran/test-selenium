@@ -5,18 +5,25 @@ import pandas as pd
 
 # Set up the Chrome driver
 from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import NoSuchElementException, WebDriverException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import os
+
+CHROMEDRIVER_PATH = os.environ.get('CHROMEDRIVER_PATH', '/usr/local/bin/chromedriver')
+GOOGLE_CHROME_BIN = os.environ.get('GOOGLE_CHROME_BIN', '/usr/bin/google-chrome')
 
 
 def daraz(url):
     # Create Chrome options
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
+    options = Options()
+    options.binary_location = GOOGLE_CHROME_BIN
+    options.add_argument('--disable-gpu')
+    options.add_argument('--no-sandbox')
+    options.headless = True
 
-    # Create the driver with the options
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH , chrome_options=options)
 
     # Load the page with Selenium
     driver.get(url)
@@ -77,11 +84,13 @@ def daraz(url):
 
 def kapruka(url):
     # Create Chrome options
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
+    options = Options()
+    options.binary_location = GOOGLE_CHROME_BIN
+    options.add_argument('--disable-gpu')
+    options.add_argument('--no-sandbox')
+    options.headless = True
 
-    # Create the driver with the options
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH , chrome_options=options)
 
     # Load the page with Selenium
     driver.get(url)
