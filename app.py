@@ -9,8 +9,8 @@ from sites import *
 # Define a function to create the search page
 def create_search_page():
     # Create a search page with a title and a search bar
-    st.title("Product Price Comparison")
-    search_term = st.text_input("Enter a product name:")
+    st.title("Flight Info Generator")
+    search_term = st.text_input("Enter a google flight link:")
 
     # Add a button to start scraping the prices
     if st.button("Search"):

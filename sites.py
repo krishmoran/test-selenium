@@ -76,12 +76,16 @@ def daraz(url):
 
 
 def kapruka(url):
-    # Create Chrome options
-    chrome_options = Options()
+
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.set_capability('browserless:token', 'ec8b3258-14ab-45dc-a702-e8b727e29f55')
+    chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--headless")
 
-    # Create the driver with the options
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Remote(
+    command_executor='https://chrome.browserless.io/webdriver',
+    options=chrome_options
+)
 
     # Load the page with Selenium
     driver.get(url)
@@ -150,12 +154,14 @@ def kapruka(url):
 
 
 def wasi(url):
-    # Create Chrome options
-    chrome_options = Options()
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.set_capability('browserless:token', 'ec8b3258-14ab-45dc-a702-e8b727e29f55')
+    chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--headless")
 
-    # Create the driver with the options
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Remote(
+    command_executor='https://chrome.browserless.io/webdriver',
+    options=chrome_options)
 
     # Load the page with Selenium
     driver.get(url)
